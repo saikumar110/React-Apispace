@@ -1,7 +1,6 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -12,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import { apis } from ".././Config/Config"
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
-
+import Header from './Header/Header';
 
 const useStyles = makeStyles({
      img: {
@@ -33,19 +32,18 @@ function LandingPage() {
           <>
                <CssBaseline />
 
-
+               <Header/>
 
                <Container fixed >
-                    <Typography variant="h3" className={classes.Head} gutterBottom gutterTop component="div">
-                         Api Base
-                    </Typography>
-                    <Box sx={{ width: '100%' }}>
-                         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} alignItems="stretch">
+                    
+                    
+               <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent="center"
+  alignItems="center" style={{margin:"auto"}}>
 
                               {apis.map((api) => {
                                    return (
-                                        <Grid md={4} >
-                                             <Card sx={{ maxWidth: 345 }} style={{ height: "100%" }} elevation={3}>
+                                        <Grid item xs={12} sm={4} md={4} >
+                                             <Card sx={{ maxWidth: 345 }} style={{ height: "100%" }} elevation={8}>
                                                   <CardActionArea>
                                                        <CardMedia
                                                             component="img"
@@ -77,7 +75,7 @@ function LandingPage() {
 
 
                          </Grid>
-                    </Box>
+                   
                </Container>
                {/* <Builder/> */}
           </>

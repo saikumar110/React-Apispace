@@ -5,13 +5,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 // import { makeStyles } from '@mui/styles';
 import TravelAdvisor from "./Pages/TravelAdvisor/TravelAdvisor"
 import LandingPage from './Components/LandingPage';
-// const useStyles = makeStyles({
-//   img: {
-//     padding:"10px",
-//     objectFit:"cover !important",
-//     width:"auto"
-//   }
-// })
+
+
 
 
 
